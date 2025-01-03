@@ -15,10 +15,10 @@ usage() {
     exit 1
 }
 upd_dots () {
-    if [ -d "$catppuccin_docklike" ]; then
+    if [ -d "$dotfiles_waybar" ]; then
         echo "Directory exists"
         echo "Starting deleting old dotfiles..."
-        sudo rm -rf "$catppuccin_docklike"
+        sudo rm -r "$catppuccin_docklike"
         echo "Coping new dotfiles.."
         sudo cp -r "$catppuccin_docklike_new" "$dotfiles_waybar"
     else
